@@ -8,10 +8,11 @@ services:
   lldb-server:
     image: cscix65g/lldb-server:arm64-latest
     network_mode: host
+    privileged: true
     ports:
       - 8080:8080
       - 9293:9293
     volumes_from:
       - swift-runtime
     volumes:
-      - /tmp:/debug
+      - .:/debug
