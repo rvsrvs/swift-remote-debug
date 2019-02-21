@@ -8,7 +8,7 @@ RUN apt-get -y install lldb-6.0
 
 EXPOSE 9293
 
-VOLUME ["/usr/lib/swift/linux"]
+VOLUME ["/swift-runtime"]
 VOLUME ["/debug"]
 
 COPY ./runserver.sh /

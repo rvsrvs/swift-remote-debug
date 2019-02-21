@@ -15,4 +15,4 @@ services:
     volumes_from:
       - swift-runtime
     volumes:
-      - .:/debug
+      - /tmp:/debug
