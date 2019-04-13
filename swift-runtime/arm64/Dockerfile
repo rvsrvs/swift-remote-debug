@@ -1,4 +1,4 @@
-FROM arm64v8/busybox:latest
+FROM scratch
 ADD ./swift-runtime /swift-runtime
 VOLUME /swift-runtime
 
