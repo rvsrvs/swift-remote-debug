@@ -8,4 +8,6 @@ rm -rf etc
 cp ../Dockerfile .
 docker build --tag cscix65g/swift-runtime:amd64-latest .
 popd
+rm swift-runtime
+
 
