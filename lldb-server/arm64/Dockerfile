@@ -1,16 +1,12 @@
-FROM ubuntu:bionic
+FROM scratch
 MAINTAINER Van Simmons <van.simmons@computecycles.com>
-
-RUN apt-get -y update
-RUN apt-get -y upgrade
-
-RUN apt-get -y install lldb-6.0 
 
 EXPOSE 9293
 
-VOLUME ["/swift-runtime"]
-VOLUME ["/debug"]
+VOLUME ["/lib", "/usr/lib", "/debug"]
 
-COPY ./runserver.sh /
+WORKDIR /debug
+ENV LD_LIBRARY_PATH=/usr/lib/swift/linux
+ENTRYPOINT ["/lib/aarch64-linux-gnu/ld-2.24.so"]
+CMD ["/usr/lib/llvm-6.0/bin/lldb-server", "platform", "--listen", "*:9293", "--server", "--min-gdbserver-port", "9294", "--max-gdbserver-port", "9296"]
 
-ENTRYPOINT ["/bin/bash", "/runserver.sh"]
