@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:bionic
 MAINTAINER Van Simmons <van.simmons@computecycles.com>
 
 EXPOSE 9293 9294 9295 9296

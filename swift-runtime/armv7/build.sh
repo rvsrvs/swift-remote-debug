@@ -6,8 +6,6 @@ mkdir -p usr/bin
 cp ../helloworld usr/bin
 rm -rf etc
 cp ../Dockerfile .
-docker build --tag cscix65g/swift-runtime:amd64-latest .
+docker build --tag cscix65g/swift-runtime:armhf-latest .
 popd
 rm -rf swift-runtime
-
-
