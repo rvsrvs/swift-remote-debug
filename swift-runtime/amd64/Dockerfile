@@ -6,7 +6,7 @@ VOLUME /usr/lib
 ADD ./usr/bin /usr/bin
 VOLUME /usr/bin
 ENV LD_LIBRARY_PATH=/usr/lib/swift/linux
-ENTRYPOINT ["/lib/x86_64-linux-gnu/ld-2.27.so"]
+ENTRYPOINT ["/lib/x86_64-linux-gnu/ld-2.31.so"]
 CMD ["/usr/bin/helloworld"]
 
 
